@@ -58,18 +58,20 @@ public class ConsumptionSpout implements IRichSpout {
 		baseTime = new GregorianCalendar().getTimeInMillis();
 		long currentTime = new GregorianCalendar().getTimeInMillis();
 		int counter = 0;
-		while((currentTime - baseTime < 1000) && (counter < this.loadPerSecond)) {
-			int key = rand.nextInt(10);
-			int value = rand.nextInt(100);
-			Event consumption = new Event(Type.CONSUMPTION, key, value);
-			_collector.emit(new Values(consumption));	
-			StringBuilder stringBuilder = new StringBuilder();
-			stringBuilder.append("Event Sent - key: ");
-			stringBuilder.append(key);
-			stringBuilder.append(" value: ");
-			stringBuilder.append(value);
-			log.info(stringBuilder.toString());
-			currentTime = new GregorianCalendar().getTimeInMillis();
+		while((currentTime - baseTime < this.INCREASE_LOAD_TIME_INTERVAL)) {
+			while((currentTime - baseTime < ConsumptionSpout.ONE_SEC) && (counter < this.loadPerSecond)) {
+				int key = rand.nextInt(10);
+				int value = rand.nextInt(100);
+				Event consumption = new Event(Type.CONSUMPTION, key, value);
+				_collector.emit(new Values(consumption));	
+				StringBuilder stringBuilder = new StringBuilder();
+				stringBuilder.append("Event Sent - key: ");
+				stringBuilder.append(key);
+				stringBuilder.append(" value: ");
+				stringBuilder.append(value);
+				log.info(stringBuilder.toString());
+				currentTime = new GregorianCalendar().getTimeInMillis();
+			}
 		}
 	}
 
