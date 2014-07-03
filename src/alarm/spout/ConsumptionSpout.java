@@ -25,7 +25,7 @@ public class ConsumptionSpout implements IRichSpout {
 	private Random rand; 
 	private int INCREASE_LOAD_TIME_INTERVAL = 10 * 1000;
 	private int loadPerSecond = 100;
-	private Long baseTime;
+	private Long initialTime;
 	public SpoutOutputCollector _collector;
     static Logger log = Logger.getLogger(ConsumptionSpout.class);
 	
@@ -55,35 +55,42 @@ public class ConsumptionSpout implements IRichSpout {
 
 	@Override
 	public void nextTuple() {
-		baseTime = new GregorianCalendar().getTimeInMillis();
+		initialTime = new GregorianCalendar().getTimeInMillis();
 		long currentTime = new GregorianCalendar().getTimeInMillis();
 		int counter = 0;
-		while((currentTime - baseTime < this.INCREASE_LOAD_TIME_INTERVAL)) {
-			while((currentTime - baseTime < ConsumptionSpout.ONE_SEC) && (counter < this.loadPerSecond)) {
+		while(currentTime - initialTime < this.INCREASE_LOAD_TIME_INTERVAL) {
+			while(((currentTime - initialTime) % 1000 < ConsumptionSpout.ONE_SEC) && (counter < this.loadPerSecond)) {
 				int key = rand.nextInt(10);
 				int value = rand.nextInt(100);
-				Event consumption = new Event(Type.CONSUMPTION, key, value);
-				_collector.emit(new Values(consumption));	
-				StringBuilder stringBuilder = new StringBuilder();
-				stringBuilder.append("Event Sent - key: ");
-				stringBuilder.append(key);
-				stringBuilder.append(" value: ");
-				stringBuilder.append(value);
-				log.info(stringBuilder.toString());
+//				Event consumption = new Event(Type.CONSUMPTION, key, value);
+				_collector.emit(new Values(key, value));	
+				String output = "Event Sent - key: " + key + " value: " + value;
+				log.info(output);
+				currentTime = new GregorianCalendar().getTimeInMillis();
+			}
+			if((currentTime - initialTime > ConsumptionSpout.ONE_SEC)) {
+				counter = 0;
+			}
+			if(currentTime - initialTime >= this.INCREASE_LOAD_TIME_INTERVAL) {
+				this.loadPerSecond *= 10;
+				this.initialTime = new GregorianCalendar().getTimeInMillis();
 				currentTime = new GregorianCalendar().getTimeInMillis();
 			}
 		}
 	}
 
 	@Override
-	public void ack(Object msgId) { }
+	public void ack(Object msgId) {
+		log.info("ACK: " + msgId.toString());
+	}
 
 	@Override
 	public void fail(Object msgId) { }
 
 	@Override
 	public void declareOutputFields(OutputFieldsDeclarer declarer) {
-		declarer.declare(new Fields("event"));
+		declarer.declare(new Fields("key","value"));
+		
 	}
 
 	@Override

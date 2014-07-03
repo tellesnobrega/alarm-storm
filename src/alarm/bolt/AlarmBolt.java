@@ -1,10 +1,14 @@
 package alarm.bolt;
 
-import java.util.HashMap;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Map;
+import java.util.Properties;
+
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
 import alarm.Event;
-import alarm.Type;
 import backtype.storm.task.OutputCollector;
 import backtype.storm.task.TopologyContext;
 import backtype.storm.topology.IRichBolt;
@@ -16,25 +20,27 @@ public class AlarmBolt implements IRichBolt {
 	private static final long serialVersionUID = 1L;
 	public static final String NAME = "ALARM";
 	public OutputCollector _collector;
-	private Map<Integer, Integer> averages = new HashMap<Integer, Integer>();
+//	private Map<Integer, Integer> averages = new HashMap<Integer, Integer>();
+	static Logger log = Logger.getLogger(AlarmBolt.class);
 
 	@SuppressWarnings("rawtypes")
 	@Override
 	public void prepare(Map stormConf, TopologyContext context, OutputCollector collector) {
 		_collector = collector;
+		Properties props = new Properties();
+		try {
+			props.load(new FileInputStream("log4j.properties"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PropertyConfigurator.configure(props);
 	}
 
 	public void execute(Tuple input) {
 		Event event = (Event) input.getValue(input.fieldIndex("event"));
-		if (event.getType() == Type.AVERAGE) {
-			averages.put(event.getKey(), event.getValue());
-		} else if (event.getType() == Type.CONSUMPTION) {
-			if (!averages.containsKey(event.getKey())) {
-				averages.put(event.getKey(), event.getValue());
-			}
-			if (sendAlarm(event.getValue(), averages.get(event.getKey()))) {
-				System.out.println("Alarm alert! Measurement: "+ event.getValue());
-			}
+		if (sendAlarm(event.getValue(), event.getAverage())) {
+			log.info("Alarm alert! Measurement: " + event.getValue());
 		}
 	}
 

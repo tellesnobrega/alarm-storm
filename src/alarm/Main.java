@@ -6,6 +6,7 @@ import alarm.spout.ConsumptionSpout;
 import backtype.storm.Config;
 import backtype.storm.StormSubmitter;
 import backtype.storm.topology.TopologyBuilder;
+import backtype.storm.tuple.Fields;
 import backtype.storm.utils.Utils;
 
 public class Main {
@@ -15,8 +16,8 @@ public class Main {
 		
 		TopologyBuilder builder = new TopologyBuilder();
 		builder.setSpout("source", new ConsumptionSpout());
-		builder.setBolt("average", new AverageCalcBolt(), 2).shuffleGrouping("source");
-		builder.setBolt("alarm", new AlarmBolt()).shuffleGrouping("average").shuffleGrouping("source"); //shuffleGrouping(?)
+		builder.setBolt("average", new AverageCalcBolt(), 2).setNumTasks(10).fieldsGrouping("source", new Fields("key"));
+		builder.setBolt("alarm", new AlarmBolt()).shuffleGrouping("average"); //shuffleGrouping(?)
 
 		Config conf = new Config();
 		conf.setNumWorkers(3);

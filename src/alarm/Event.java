@@ -9,12 +9,17 @@ import java.io.Serializable;
 public class Event implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private Type type;
-	private int key;
+	private int average;
 	private int value;
 	
-	public Event(Type type, int key, int value) {
+	public Event(Type type, int average, int value) {
 		this.type = type;
-		this.key = key;
+		this.average = average;
+		this.value = value;
+	}
+
+	public Event(int average, int value) {
+		this.average = average;
 		this.value = value;
 	}
 
@@ -22,8 +27,8 @@ public class Event implements Serializable {
 		return type;
 	}
 
-	public int getKey() {
-		return key;
+	public int getAverage() {
+		return average;
 	}
 	
 	public int getValue() {

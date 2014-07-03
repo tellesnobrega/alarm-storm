@@ -1,8 +1,14 @@
 package alarm.bolt;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
+
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
 import alarm.Event;
 import alarm.Type;
@@ -19,19 +25,28 @@ public class AverageCalcBolt implements IRichBolt {
 	public static final int MAX_SIZE = 10;
 	private List<Integer> measurements = new ArrayList<>();
 	public OutputCollector _collector;
+	static Logger log = Logger.getLogger(AverageCalcBolt.class);
 
 	@Override
 	public void prepare(@SuppressWarnings("rawtypes") Map stormConf, TopologyContext context, OutputCollector collector) {
 		_collector = collector;
+		Properties props = new Properties();
+		try {
+			props.load(new FileInputStream("log4j.properties"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PropertyConfigurator.configure(props);
 	}
 
 	@Override
 	public void execute(Tuple input) {
-		Event consumption = (Event) input.getValue(input.fieldIndex("event"));
-		addMeasurement(consumption.getValue());
-		Event average = new Event(Type.AVERAGE, consumption.getKey(), calcAverage());
+		Integer value = input.getIntegerByField("value");
+		addMeasurement(value);
+		Event average = new Event(calcAverage(), value);
 		_collector.emit(new Values(average));
-		System.out.println("Average: " + average.getValue());
+		log.info("Value: " + value);
 	}
 
 	@Override
