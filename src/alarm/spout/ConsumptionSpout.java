@@ -25,7 +25,7 @@ public class ConsumptionSpout implements IRichSpout {
 	private Random rand; 
 	private int INCREASE_LOAD_TIME_INTERVAL = 10 * 1000;
 	private int loadPerSecond = 100;
-	private Long initialTime;
+	private Long initialTenSeconds;
 	public SpoutOutputCollector _collector;
     static Logger log = Logger.getLogger(ConsumptionSpout.class);
 	
@@ -55,27 +55,30 @@ public class ConsumptionSpout implements IRichSpout {
 
 	@Override
 	public void nextTuple() {
-		initialTime = new GregorianCalendar().getTimeInMillis();
+		initialTenSeconds = new GregorianCalendar().getTimeInMillis();
+		long initialOneSecond = new GregorianCalendar().getTimeInMillis();
 		long currentTime = new GregorianCalendar().getTimeInMillis();
 		int counter = 0;
-		while(currentTime - initialTime < this.INCREASE_LOAD_TIME_INTERVAL) {
-			while(((currentTime - initialTime) % 1000 < ConsumptionSpout.ONE_SEC) && (counter < this.loadPerSecond)) {
+		while(currentTime - initialTenSeconds < this.INCREASE_LOAD_TIME_INTERVAL) {
+			while(currentTime - initialOneSecond < ConsumptionSpout.ONE_SEC) {
 				int key = rand.nextInt(10);
 				int value = rand.nextInt(100);
-//				Event consumption = new Event(Type.CONSUMPTION, key, value);
-				_collector.emit(new Values(key, value));	
-				String output = "Event Sent - key: " + key + " value: " + value;
-				log.info(output);
+				if(counter < this.loadPerSecond) {
+					counter++;
+					_collector.emit(new Values(key, value));	
+					String output = "Event Sent - key: " + key + " value: " + value;
+					log.info(output);
+				}
 				currentTime = new GregorianCalendar().getTimeInMillis();
 			}
-			if((currentTime - initialTime > ConsumptionSpout.ONE_SEC)) {
-				counter = 0;
-			}
-			if(currentTime - initialTime >= this.INCREASE_LOAD_TIME_INTERVAL) {
+			counter = 0;
+			if(currentTime - initialTenSeconds >= this.INCREASE_LOAD_TIME_INTERVAL) {
 				this.loadPerSecond *= 10;
-				this.initialTime = new GregorianCalendar().getTimeInMillis();
+				this.initialTenSeconds = new GregorianCalendar().getTimeInMillis();
 				currentTime = new GregorianCalendar().getTimeInMillis();
 			}
+			initialOneSecond = new GregorianCalendar().getTimeInMillis();
+			currentTime = new GregorianCalendar().getTimeInMillis();
 		}
 	}
 

@@ -46,6 +46,7 @@ public class AverageCalcBolt implements IRichBolt {
 		addMeasurement(value);
 		Event average = new Event(calcAverage(), value);
 		_collector.emit(new Values(average));
+		_collector.ack(input);
 		log.info("Value: " + value);
 	}
 
