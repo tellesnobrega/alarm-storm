@@ -10,8 +10,6 @@ import java.util.Random;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
-import alarm.Event;
-import alarm.Type;
 import backtype.storm.spout.SpoutOutputCollector;
 import backtype.storm.task.TopologyContext;
 import backtype.storm.topology.IRichSpout;
@@ -65,7 +63,7 @@ public class ConsumptionSpout implements IRichSpout {
 				int value = rand.nextInt(100);
 				if(counter < this.loadPerSecond) {
 					counter++;
-					_collector.emit(new Values(key, value));	
+					_collector.emit(new Values(key, value), new GregorianCalendar().getTimeInMillis());	
 					String output = "Event Sent - key: " + key + " value: " + value;
 					log.info(output);
 				}
