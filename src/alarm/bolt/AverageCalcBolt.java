@@ -34,7 +34,6 @@ public class AverageCalcBolt implements IRichBolt {
 		try {
 			props.load(new FileInputStream("log4j.properties"));
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		PropertyConfigurator.configure(props);
@@ -42,12 +41,13 @@ public class AverageCalcBolt implements IRichBolt {
 
 	@Override
 	public void execute(Tuple input) {
+		Integer key = input.getIntegerByField("key");
 		Integer value = input.getIntegerByField("value");
 		addMeasurement(value);
 		Event average = new Event(calcAverage(), value);
 		_collector.emit(new Values(average));
 		_collector.ack(input);
-		log.info("Value: " + value);
+		log.info("Key: " + key + " Value: " + value);
 	}
 
 	@Override
