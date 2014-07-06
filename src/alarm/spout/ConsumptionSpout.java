@@ -65,9 +65,10 @@ public class ConsumptionSpout implements IRichSpout {
 					counter++;
 					_collector.emit(new Values(key, value), new GregorianCalendar().getTimeInMillis());	
 					String output = "Event Sent - key: " + key + " value: " + value;
-					log.info(output);
+//					log.info(output);
 				}
 				currentTime = new GregorianCalendar().getTimeInMillis();
+				log.info("COUNTER: " + counter);
 			}
 			counter = 0;
 			if(currentTime - initialTenSeconds >= this.INCREASE_LOAD_TIME_INTERVAL) {
