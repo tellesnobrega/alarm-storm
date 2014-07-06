@@ -32,14 +32,7 @@ public class ConsumptionSpout implements IRichSpout {
 	public void open(@SuppressWarnings("rawtypes") Map conf, TopologyContext context, SpoutOutputCollector collector) {
 		rand = new Random();
 		_collector = collector;
-		Properties props = new Properties();
-		try {
-			props.load(new FileInputStream("log4j.properties"));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		PropertyConfigurator.configure(props);
+		PropertyConfigurator.configure("log4j.properties");
 	}
 
 	@Override
@@ -58,18 +51,21 @@ public class ConsumptionSpout implements IRichSpout {
 		long initialOneSecond = new GregorianCalendar().getTimeInMillis();
 		long currentTime = new GregorianCalendar().getTimeInMillis();
 		int counter = 0;
+		int loop = 0;
 		while(currentTime - initialTenSeconds < this.INCREASE_LOAD_TIME_INTERVAL) {
+			loop++;
 			while(currentTime - initialOneSecond < ConsumptionSpout.ONE_SEC) {
 				int key = rand.nextInt(10);
 				int value = rand.nextInt(100);
 				if(counter < this.loadPerSecond) {
 					counter++;
-					_collector.emit(new Values(key, value), new GregorianCalendar().getTimeInMillis());	
+					String id = "ID" + counter + ";" + loop; 
+					_collector.emit(new Values(key, value), id);	
 					String output = "Event Sent - key: " + key + " value: " + value;
-//					log.info(output);
+					log.info(output);
 				}
 				currentTime = new GregorianCalendar().getTimeInMillis();
-//				log.info("COUNTER: " + counter);
+				log.info("COUNTER: " + counter);
 			}
 			counter = 0;
 			if(currentTime - initialTenSeconds >= this.INCREASE_LOAD_TIME_INTERVAL) {

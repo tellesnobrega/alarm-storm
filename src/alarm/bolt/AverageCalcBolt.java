@@ -1,17 +1,13 @@
 package alarm.bolt;
 
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Properties;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
 import alarm.Event;
-import alarm.Type;
 import backtype.storm.task.OutputCollector;
 import backtype.storm.task.TopologyContext;
 import backtype.storm.topology.IRichBolt;
@@ -30,13 +26,7 @@ public class AverageCalcBolt implements IRichBolt {
 	@Override
 	public void prepare(@SuppressWarnings("rawtypes") Map stormConf, TopologyContext context, OutputCollector collector) {
 		_collector = collector;
-		Properties props = new Properties();
-		try {
-			props.load(new FileInputStream("log4j.properties"));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		PropertyConfigurator.configure(props);
+		PropertyConfigurator.configure("log4j.properties");
 	}
 
 	@Override

@@ -1,9 +1,6 @@
 package alarm.bolt;
 
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.util.Map;
-import java.util.Properties;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
@@ -27,14 +24,7 @@ public class AlarmBolt implements IRichBolt {
 	@Override
 	public void prepare(Map stormConf, TopologyContext context, OutputCollector collector) {
 		_collector = collector;
-		Properties props = new Properties();
-		try {
-			props.load(new FileInputStream("log4j.properties"));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		PropertyConfigurator.configure(props);
+		PropertyConfigurator.configure("log4j.properties");
 	}
 
 	public void execute(Tuple input) {
