@@ -30,7 +30,7 @@ public class AlarmBolt implements IRichBolt {
 	public void execute(Tuple input) {
 		Event event = (Event) input.getValue(input.fieldIndex("event"));
 		if (sendAlarm(event.getValue(), event.getAverage())) {
-			log.info("Alarm alert! Measurement: " + event.getValue());
+//			log.info("Alarm alert! Measurement: " + event.getValue());
 		}
 	}
 

@@ -8,23 +8,12 @@ import java.io.Serializable;
 
 public class Event implements Serializable {
 	private static final long serialVersionUID = 1L;
-	private Type type;
 	private int average;
 	private int value;
-	
-	public Event(Type type, int average, int value) {
-		this.type = type;
-		this.average = average;
-		this.value = value;
-	}
 
 	public Event(int average, int value) {
 		this.average = average;
 		this.value = value;
-	}
-
-	public Type getType() {
-		return type;
 	}
 
 	public int getAverage() {

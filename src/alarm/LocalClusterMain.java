@@ -14,7 +14,7 @@ public class LocalClusterMain {
 	public static void main(String[] args) throws Exception {
 		TopologyBuilder tb = new TopologyBuilder();
 
-		tb.setSpout("source", new ConsumptionSpout());
+		tb.setSpout("source", new ConsumptionSpout(1000));
 		tb.setBolt("average", new AverageCalcBolt()).shuffleGrouping("source");
 		tb.setBolt("alarm", new AlarmBolt()).shuffleGrouping("average").shuffleGrouping("source");
 

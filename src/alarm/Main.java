@@ -15,7 +15,7 @@ public class Main {
 	public static void main(String[] args) throws Exception {
 		
 		TopologyBuilder builder = new TopologyBuilder();
-		builder.setSpout("source", new ConsumptionSpout());
+		builder.setSpout("source", new ConsumptionSpout(100));
 		builder.setBolt("average", new AverageCalcBolt(), 2).setNumTasks(10).fieldsGrouping("source", new Fields("key"));
 		builder.setBolt("alarm", new AlarmBolt()).shuffleGrouping("average"); //shuffleGrouping(?)
 
