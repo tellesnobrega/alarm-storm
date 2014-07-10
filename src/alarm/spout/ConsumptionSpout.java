@@ -53,12 +53,12 @@ public class ConsumptionSpout implements IRichSpout {
 		String id = key+";"+value;
 		_collector.emit(new Values(key, value), id);	
 		String output = "Event Sent - key: " + key + " value: " + value;
-//		log.info(output);
+		log.info(output);
 	}
 
 	@Override
 	public void ack(Object msgId) {
-		log.info("ACK: " + msgId.toString());
+//		log.info("ACK: " + msgId.toString());
 	}
 
 	@Override

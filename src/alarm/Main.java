@@ -14,8 +14,9 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		
+		int messagesPerSecond = Integer.parseInt(args[0]);
 		TopologyBuilder builder = new TopologyBuilder();
-		builder.setSpout("source", new ConsumptionSpout(100));
+		builder.setSpout("source", new ConsumptionSpout(messagesPerSecond));
 		builder.setBolt("average", new AverageCalcBolt(), 2).setNumTasks(10).fieldsGrouping("source", new Fields("key"));
 		builder.setBolt("alarm", new AlarmBolt()).shuffleGrouping("average"); //shuffleGrouping(?)
 
