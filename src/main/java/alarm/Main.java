@@ -17,7 +17,7 @@ public class Main {
 		int messagesPerSecond = Integer.parseInt(args[0]);
 		TopologyBuilder builder = new TopologyBuilder();
 		builder.setSpout("source", new ConsumptionSpout(messagesPerSecond));
-		builder.setBolt("average", new AverageCalcBolt(), 2).setNumTasks(10).fieldsGrouping("source", new Fields("key"));
+		builder.setBolt("average", new AverageCalcBolt(), 3).setNumTasks(12).fieldsGrouping("source", new Fields("key"));
 		builder.setBolt("main/alarm", new AlarmBolt()).shuffleGrouping("average"); //shuffleGrouping(?)
 
 		Config conf = new Config();
