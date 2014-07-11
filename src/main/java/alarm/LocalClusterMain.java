@@ -1,12 +1,12 @@
-package main.alarm;
+package main.java.alarm;
 
-import main.alarm.bolt.AlarmBolt;
-import main.alarm.bolt.AverageCalcBolt;
-import main.alarm.spout.ConsumptionSpout;
 import backtype.storm.Config;
 import backtype.storm.LocalCluster;
 import backtype.storm.topology.TopologyBuilder;
 import backtype.storm.utils.Utils;
+import main.java.alarm.bolt.AlarmBolt;
+import main.java.alarm.bolt.AverageCalcBolt;
+import main.java.alarm.spout.ConsumptionSpout;
 
 public class LocalClusterMain {
 	private static final long TEN_MIN = 10*60*1000;

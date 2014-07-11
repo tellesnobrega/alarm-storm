@@ -1,12 +1,4 @@
-package main.alarm.bolt;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
-import main.alarm.Event;
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
+package main.java.alarm.bolt;
 
 import backtype.storm.task.OutputCollector;
 import backtype.storm.task.TopologyContext;
@@ -16,10 +8,18 @@ import backtype.storm.tuple.Fields;
 import backtype.storm.tuple.Tuple;
 import backtype.storm.tuple.Values;
 
+import main.java.alarm.Event;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 public class AverageCalcBolt implements IRichBolt {
 	private static final long serialVersionUID = 1L;
 	public static final int MAX_SIZE = 10;
-	private List<Integer> measurements = new ArrayList<>();
+	private List<Integer> measurements = new ArrayList<Integer>();
 	public OutputCollector _collector;
 	static Logger log = Logger.getLogger(AverageCalcBolt.class);
 

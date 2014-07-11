@@ -1,10 +1,6 @@
-package main.alarm;
+package main.java.alarm;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutput;
-import java.io.ObjectOutputStream;
-import java.io.Serializable;
+import java.io.*;
 
 public class Event implements Serializable {
 	private static final long serialVersionUID = 1L;

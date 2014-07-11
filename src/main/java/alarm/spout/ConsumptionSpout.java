@@ -1,7 +1,4 @@
-package main.alarm.spout;
-
-import java.util.Map;
-import java.util.Random;
+package main.java.alarm.spout;
 
 import backtype.storm.spout.SpoutOutputCollector;
 import backtype.storm.task.TopologyContext;
@@ -10,9 +7,11 @@ import backtype.storm.topology.OutputFieldsDeclarer;
 import backtype.storm.tuple.Fields;
 import backtype.storm.tuple.Values;
 import backtype.storm.utils.Utils;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.Map;
+import java.util.Random;
 
 public class ConsumptionSpout implements IRichSpout {
 	private static final long serialVersionUID = 1L;
