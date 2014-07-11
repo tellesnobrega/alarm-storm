@@ -1,29 +1,31 @@
 package main.java.alarm.bolt;
 
+import java.util.Map;
+
+import main.java.alarm.Event;
+import main.java.alarm.spout.ConsumptionSpout;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import backtype.storm.task.OutputCollector;
 import backtype.storm.task.TopologyContext;
 import backtype.storm.topology.IRichBolt;
 import backtype.storm.topology.OutputFieldsDeclarer;
 import backtype.storm.tuple.Fields;
 import backtype.storm.tuple.Tuple;
-import main.java.alarm.Event;
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
-
-import java.util.Map;
 
 public class AlarmBolt implements IRichBolt {
 	private static final long serialVersionUID = 1L;
 	public static final String NAME = "ALARM";
 	public OutputCollector _collector;
 //	private Map<Integer, Integer> averages = new HashMap<Integer, Integer>();
-	static Logger log = Logger.getLogger(AlarmBolt.class);
+	private static final Logger log = LoggerFactory.getLogger(AlarmBolt.class);
 
 	@SuppressWarnings("rawtypes")
 	@Override
 	public void prepare(Map stormConf, TopologyContext context, OutputCollector collector) {
 		_collector = collector;
-		PropertyConfigurator.configure("log4j.properties");
 	}
 
 	public void execute(Tuple input) {

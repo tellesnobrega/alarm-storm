@@ -27,6 +27,7 @@ public class Main {
 		StormSubmitter.submitTopology("sg-app-storm", conf, builder.createTopology());
 		
 		sleep();
+		
 	}
 	
 	private static void sleep() {
