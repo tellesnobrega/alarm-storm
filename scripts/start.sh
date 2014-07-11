@@ -2,7 +2,7 @@
 
 cd ..
 ant -buildfile build.xml 
-storm jar target/alarm-storm.jar alarm.Main
+storm jar target/alarm-storm.jar Main
 sleep 600
 storm kill alarm-storm
 

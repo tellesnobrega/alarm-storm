@@ -1,19 +1,18 @@
-package alarm.bolt;
+package main.alarm.bolt;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import main.alarm.Event;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
-import alarm.Event;
 import backtype.storm.task.OutputCollector;
 import backtype.storm.task.TopologyContext;
 import backtype.storm.topology.IRichBolt;
 import backtype.storm.topology.OutputFieldsDeclarer;
 import backtype.storm.tuple.Fields;
-import backtype.storm.tuple.MessageId;
 import backtype.storm.tuple.Tuple;
 import backtype.storm.tuple.Values;
 

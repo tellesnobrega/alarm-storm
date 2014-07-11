@@ -1,8 +1,8 @@
-package alarm;
+package main.alarm;
 
-import alarm.bolt.AlarmBolt;
-import alarm.bolt.AverageCalcBolt;
-import alarm.spout.ConsumptionSpout;
+import main.alarm.bolt.AlarmBolt;
+import main.alarm.bolt.AverageCalcBolt;
+import main.alarm.spout.ConsumptionSpout;
 import backtype.storm.Config;
 import backtype.storm.LocalCluster;
 import backtype.storm.topology.TopologyBuilder;
@@ -16,7 +16,7 @@ public class LocalClusterMain {
 
 		tb.setSpout("source", new ConsumptionSpout(1000));
 		tb.setBolt("average", new AverageCalcBolt()).shuffleGrouping("source");
-		tb.setBolt("alarm", new AlarmBolt()).shuffleGrouping("average").shuffleGrouping("source");
+		tb.setBolt("main/alarm", new AlarmBolt()).shuffleGrouping("average").shuffleGrouping("source");
 
 		Config conf = new Config();
 		conf.setNumWorkers(4);

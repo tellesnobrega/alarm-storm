@@ -1,10 +1,7 @@
-package alarm.spout;
+package main.alarm.spout;
 
 import java.util.Map;
 import java.util.Random;
-
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
 
 import backtype.storm.spout.SpoutOutputCollector;
 import backtype.storm.task.TopologyContext;
@@ -14,20 +11,22 @@ import backtype.storm.tuple.Fields;
 import backtype.storm.tuple.Values;
 import backtype.storm.utils.Utils;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class ConsumptionSpout implements IRichSpout {
 	private static final long serialVersionUID = 1L;
 	private static final long ONE_SEC = 1*1000;
 	private Random rand; 
 	private int[] loadPerSecond = {100,500,1000,1500,2000,2500};
 	public SpoutOutputCollector _collector;
-    static Logger log = Logger.getLogger(ConsumptionSpout.class);
+    private static final Logger log = LoggerFactory.getLogger(ConsumptionSpout.class);
     private long sleepTime;
 	
 
     public ConsumptionSpout(int measuresPerSec) {
 		this.sleepTime = ONE_SEC/measuresPerSec;
 		rand = new Random();
-		PropertyConfigurator.configure("log4j.properties");
 	}
     
 	@Override

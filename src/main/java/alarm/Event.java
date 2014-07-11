@@ -1,4 +1,4 @@
-package alarm;
+package main.alarm;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

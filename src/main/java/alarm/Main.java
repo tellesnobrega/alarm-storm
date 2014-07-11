@@ -1,8 +1,8 @@
-package alarm;
+package main.alarm;
 
-import alarm.bolt.AlarmBolt;
-import alarm.bolt.AverageCalcBolt;
-import alarm.spout.ConsumptionSpout;
+import main.alarm.bolt.AlarmBolt;
+import main.alarm.bolt.AverageCalcBolt;
+import main.alarm.spout.ConsumptionSpout;
 import backtype.storm.Config;
 import backtype.storm.StormSubmitter;
 import backtype.storm.topology.TopologyBuilder;
@@ -18,7 +18,7 @@ public class Main {
 		TopologyBuilder builder = new TopologyBuilder();
 		builder.setSpout("source", new ConsumptionSpout(messagesPerSecond));
 		builder.setBolt("average", new AverageCalcBolt(), 2).setNumTasks(10).fieldsGrouping("source", new Fields("key"));
-		builder.setBolt("alarm", new AlarmBolt()).shuffleGrouping("average"); //shuffleGrouping(?)
+		builder.setBolt("main/alarm", new AlarmBolt()).shuffleGrouping("average"); //shuffleGrouping(?)
 
 		Config conf = new Config();
 		conf.setNumWorkers(3);

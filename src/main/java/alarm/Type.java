@@ -1,4 +1,4 @@
-package alarm;
+package main.alarm;
 
 public enum Type {
 	
