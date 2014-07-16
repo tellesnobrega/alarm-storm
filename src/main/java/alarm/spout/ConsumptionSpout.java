@@ -7,6 +7,7 @@ import backtype.storm.topology.OutputFieldsDeclarer;
 import backtype.storm.tuple.Fields;
 import backtype.storm.tuple.Values;
 import backtype.storm.utils.Utils;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -50,18 +51,18 @@ public class ConsumptionSpout implements IRichSpout {
 		int value = rand.nextInt(100);
 		String id = key+";"+value;
 		_collector.emit(new Values(key, value), id);	
-		String output = "Event Sent - key: " + key + " value: " + value;
+		String output = "EventSent: " + id;
 		log.info(output);
 	}
 
 	@Override
 	public void ack(Object msgId) {
-//		log.info("ACK: " + msgId.toString());
+		log.info("ACK: " + msgId.toString());
 	}
 
 	@Override
 	public void fail(Object msgId) {
-		log.info("FAIL: " + msgId.toString());
+        log.info("FAIL: " + msgId.toString());
 	}
 
 	@Override

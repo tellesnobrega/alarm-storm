@@ -37,7 +37,7 @@ public class AverageCalcBolt implements IRichBolt {
 		Event average = new Event(calcAverage(), value);
 		_collector.emit(new Values(average));
 		_collector.ack(input);
-//		log.info("Key: " + key + " Value: " + value);
+		log.info("ACK: " + key + ";" + value);
 	}
 
 	@Override
