@@ -15,18 +15,23 @@ public class Main {
 	public static void main(String[] args) throws Exception {
 		
 		int messagesPerSecond = Integer.parseInt(args[0]);
+		int numOfWorkers;
+		try{
+			numOfWorkers = Integer.parseInt(args[1]);
+		}catch(Exception e) {
+			numOfWorkers = 1;
+		}
+		
 		TopologyBuilder builder = new TopologyBuilder();
-		builder.setSpout("source", new ConsumptionSpout(messagesPerSecond));
-		builder.setBolt("average", new AverageCalcBolt(), 2).setNumTasks(10).fieldsGrouping("source", new Fields("key"));
+		builder.setSpout("source", new ConsumptionSpout(messagesPerSecond), numOfWorkers);
+		builder.setBolt("average", new AverageCalcBolt(), 3).setNumTasks(12).fieldsGrouping("source", new Fields("key"));
 		builder.setBolt("main/alarm", new AlarmBolt()).shuffleGrouping("average"); //shuffleGrouping(?)
 
 		Config conf = new Config();
         conf.setDebug(false);
-		conf.setNumWorkers(3);
+		conf.setNumWorkers(7);
 
 		StormSubmitter.submitTopology("sg-app-storm", conf, builder.createTopology());
-		
-		sleep();
 		
 	}
 	
