@@ -1,8 +1,6 @@
 package main.java.alarm.bolt;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import main.java.alarm.Event;
 
@@ -25,7 +23,7 @@ public class AverageCalcBolt implements IRichBolt {
 	private static final Logger log = LoggerFactory.getLogger(AverageCalcBolt.class);
 
 	@Override
-	public void prepare(@SuppressWarnings("rawtypes") Map stormConf, TopologyContext context, OutputCollector collector) {
+	public void prepare(Map stormConf, TopologyContext context, OutputCollector collector) {
 		_collector = collector;
 	}
 
@@ -34,11 +32,12 @@ public class AverageCalcBolt implements IRichBolt {
 		Integer key = input.getIntegerByField("key");
 		Integer value = input.getIntegerByField("value");
 		addMeasurement(value);
-		Event average = new Event(calcAverage(), value);
+        Date timestamp = new GregorianCalendar().getTime();
+        Event average = new Event(calcAverage(), value, timestamp);
 		_collector.emit(new Values(average));
-		_collector.ack(input);
-		log.info("ACK: " + key + ";" + value);
-	}
+        log.info("ACK: " + key + ";" + value + ";" + timestamp);
+        _collector.ack(input);
+    }
 
 	@Override
 	public void cleanup() { }

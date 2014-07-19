@@ -8,9 +8,12 @@ import backtype.storm.tuple.Fields;
 import backtype.storm.tuple.Values;
 import backtype.storm.utils.Utils;
 
+import main.java.alarm.Event;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.Map;
 import java.util.Random;
 
@@ -46,23 +49,25 @@ public class ConsumptionSpout implements IRichSpout {
 	@Override
 	public void nextTuple() {
 		Utils.sleep(this.sleepTime);
-		
+
 		int key = rand.nextInt(10);
-		int value = rand.nextInt(100);
-		String id = key+";"+value;
-		_collector.emit(new Values(key, value), id);	
-		String output = "EventSent: " + id;
+        int value = rand.nextInt(100);
+        Date timestamp = new GregorianCalendar().getTime();
+        Event event = new Event(value, timestamp);
+        String id = key+";"+value;
+		_collector.emit(new Values(key, event), id);
+		String output = "EventSent: " + timestamp;
 		log.info(output);
 	}
 
 	@Override
 	public void ack(Object msgId) {
-		log.info("ACK: " + msgId.toString());
+//		log.info("ACK: " + msgId.toString());
 	}
 
 	@Override
 	public void fail(Object msgId) {
-        log.info("FAIL: " + msgId.toString());
+//        log.info("FAIL: " + msgId.toString());
 	}
 
 	@Override
