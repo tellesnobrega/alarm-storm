@@ -1,8 +1,13 @@
 package main.java.alarm.bolt;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.List;
+import java.util.Map;
 
 import main.java.alarm.Event;
+import main.java.utils.LocalUtils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,14 +35,14 @@ public class AverageCalcBolt implements IRichBolt {
 	@Override
 	public void execute(Tuple input) {
 		Integer key = input.getIntegerByField("key");
-		Event event = (Event) input.getValueByField("event");
+		Event event = (Event) input.getValue(input.fieldIndex("event"));
         int value = event.getValue();
 		addMeasurement(value);
         Date timestamp = new GregorianCalendar().getTime();
+        String timestamp_formated = LocalUtils.formatDate(timestamp);
         Event average = new Event(calcAverage(), value, timestamp);
 		_collector.emit(new Values(average));
-        log.info("ACK: " + key + ";" + value + ";" + timestamp);
-        _collector.ack(input);
+        log.info("ACK");
     }
 
 	@Override

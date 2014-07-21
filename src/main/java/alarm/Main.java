@@ -28,7 +28,7 @@ public class Main {
 		builder.setBolt("main/alarm", new AlarmBolt()).shuffleGrouping("average"); //shuffleGrouping(?)
 
 		Config conf = new Config();
-        conf.setDebug(false);
+		conf.put(Config.TOPOLOGY_DEBUG, false);
 		conf.setNumWorkers(7);
 
 		StormSubmitter.submitTopology("sg-app-storm", conf, builder.createTopology());

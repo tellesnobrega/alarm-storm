@@ -1,5 +1,16 @@
 package main.java.alarm.spout;
 
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.Map;
+import java.util.Random;
+
+import main.java.alarm.Event;
+import main.java.utils.LocalUtils;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import backtype.storm.spout.SpoutOutputCollector;
 import backtype.storm.task.TopologyContext;
 import backtype.storm.topology.IRichSpout;
@@ -7,15 +18,6 @@ import backtype.storm.topology.OutputFieldsDeclarer;
 import backtype.storm.tuple.Fields;
 import backtype.storm.tuple.Values;
 import backtype.storm.utils.Utils;
-
-import main.java.alarm.Event;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.Map;
-import java.util.Random;
 
 public class ConsumptionSpout implements IRichSpout {
 	private static final long serialVersionUID = 1L;
@@ -53,10 +55,11 @@ public class ConsumptionSpout implements IRichSpout {
 		int key = rand.nextInt(10);
         int value = rand.nextInt(100);
         Date timestamp = new GregorianCalendar().getTime();
+        String timestamp_formated = LocalUtils.formatDate(timestamp);
         Event event = new Event(value, timestamp);
         String id = key+";"+value;
-		_collector.emit(new Values(key, event), id);
-		String output = "EventSent: " + timestamp;
+		_collector.emit(new Values(key, event));
+		String output = "EventSent";
 		log.info(output);
 	}
 
@@ -72,7 +75,7 @@ public class ConsumptionSpout implements IRichSpout {
 
 	@Override
 	public void declareOutputFields(OutputFieldsDeclarer declarer) {
-		declarer.declare(new Fields("key","value"));
+		declarer.declare(new Fields("key","event"));
 		
 	}
 
