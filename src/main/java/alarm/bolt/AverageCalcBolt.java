@@ -30,7 +30,8 @@ public class AverageCalcBolt implements IRichBolt {
 	@Override
 	public void execute(Tuple input) {
 		Integer key = input.getIntegerByField("key");
-		Integer value = input.getIntegerByField("value");
+		Event event = (Event) input.getValueByField("event");
+        int value = event.getValue();
 		addMeasurement(value);
         Date timestamp = new GregorianCalendar().getTime();
         Event average = new Event(calcAverage(), value, timestamp);
