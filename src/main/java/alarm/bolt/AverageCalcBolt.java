@@ -42,7 +42,7 @@ public class AverageCalcBolt implements IRichBolt {
         String timestamp_formated = LocalUtils.formatDate(timestamp);
         Event average = new Event(calcAverage(), value, timestamp);
 		_collector.emit(new Values(average));
-        log.info("ACK");
+        log.info("AckSent");
     }
 
 	@Override
