@@ -23,7 +23,7 @@ def main(args):
   out_file = str(args[1])
   f = open(file_name, 'r')
   out = open(out_file, 'w')
-  _write(out, "time;event;total")
+  _write(out, "hour;minute;second;event;total")
   base_time="-1"
   for line in f:
       if 'AckSent' or 'EventSent' in line:
