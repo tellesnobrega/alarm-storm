@@ -11,15 +11,24 @@ metrics = function(directory, messages) {
   
   dados = rbind(dados_1.1, dados_1.2, dados_1.3, dados_1.4, dados_1.5, dados_1.6, dados_1.7)
   
-  dados_consumption = subset(dados, dados$unit == 'ConsumptionSpout' | dados$unit == 'AverageCalcBolt')  
-  
-  grouped = ddply(dados_consumption, .(time,locale, unit), summarize, total = length(time))
+  grouped = ddply(dados, .(hour,minute,second, event), summarize,total_sent = sum(total))
   
   return(grouped)
   
 }
 
-root_path = "/local/storm/experimentos/teste"
+root_path = "teste3.log"
+
+data = read.table("teste.log", sep=";", header=TRUE)
+value = sum(data$total)
+data2 =  read.table("teste3.log", sep=";", header=TRUE)
+value2 = sum(data2$total)
+data3 =  read.table("teste3.log", sep=";", header=TRUE)
+value2 = sum(data2$total)
+data_final = ddply(rbind(data, data2,data3), .(hour,minute,second, event), summarize,total_sent = sum(total))
+grouped = ddply(data2, .(minute), summarize, messages = length(minute), Mean = mean(total), SD = sd(total))
+
+
 
 get_event_df = function(df) {
   event = subset(df, df$locale == 'EventSent:')
