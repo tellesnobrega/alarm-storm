@@ -26,7 +26,7 @@ do
     then
         python parser.py $STORAGE_FOLDER/worker-ack-1.$i.log $STORAGE_FOLDER/worker-ack-$i.log
     else
-        echo "time;event;total" >> $STORAGE_FOLDER/worker-ack-$i.log
+        echo "hour;minute;second;event;total" >> $STORAGE_FOLDER/worker-ack-$i.log
     fi
 done
 
