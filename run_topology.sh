@@ -22,8 +22,12 @@ done
 
 for i in {1..7}
 do
-    python parser.py $STORAGE_FOLDER/worker-ack-1.$i.log $STORAGE_FOLDER/worker-ack-$i.log
-
+    if [ -f $STORAGE_FOLDER/worker-ack-1.$i.log ];
+    then
+        python parser.py $STORAGE_FOLDER/worker-ack-1.$i.log $STORAGE_FOLDER/worker-ack-$i.log
+    else
+        echo "time;event;total" >> $STORAGE_FOLDER/worker-ack-$i.log
+    fi
 done
 
 #Delete local unecessary files

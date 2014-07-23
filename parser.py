@@ -1,7 +1,12 @@
+import re
 import sys
 
 def parse_line(base_time, second_total, message):
-    line = base_time +";"+ message + ";" +  str(second_total)
+    hour = base_time[0]
+    minutes = base_time[1]
+    seconds = base_time[2]
+
+    line = hour +";"+minutes+";"+seconds+";"+ str(message) + ";" +  str(second_total)
     return line
 
 def _add(second_total):
@@ -18,35 +23,40 @@ def main(args):
   out_file = str(args[1])
   f = open(file_name, 'r')
   out = open(out_file, 'w')
-  _write(out, "time;event")
-  base_time=-1
+  _write(out, "time;event;total")
+  base_time="-1"
   for line in f:
-      if 'ACK' or 'Event' in line:
+      if 'AckSent' or 'EventSent' in line:
           line_split = line.strip().split(";")
-          if(base_time == -1):
-             base_time = line_split[0].split(",")[0]
-          if not (line_split[0].split(",")[0] == base_time):
-              to_write = parse_line(base_time,second_total_ack, "Ack")
+          if(base_time == "-1"):
+              base_time = line_split[0].split(":")
+          new_base_time = line_split[0].split(":")
+          if not (new_base_time[0] == base_time[0] and new_base_time[1] == base_time[1] and new_base_time[2] == base_time[2]):
+              if not (second_total_ack == 0):
+                  to_write = parse_line(base_time,second_total_ack, "AckSent")
+                  _write(out, to_write)
               second_total_ack = 0
-              _write(out, to_write)
-              to_write = parse_line(base_time,second_total_event, "Event")
+              if not (second_total_event == 0):
+                  to_write = parse_line(base_time,second_total_event, "EventSent")
+                  _write(out, to_write)
               second_total_event = 0
-              _write(out, to_write)
-              if("ACK" in line):
+              if "AckSent" in line:
                   second_total_ack = _add(second_total_ack)
-              else:
+              elif "EventSent" in line:
                    second_total_event = _add(second_total_event)
-              base_time = line_split[0].split(",")[0]
+              base_time = new_base_time
           else:
-              if("ACK" in line):
+              if "AckSent" in line:
                   second_total_ack = _add(second_total_ack)
-              else:
+              elif "EventSent" in line:
                   second_total_event = _add(second_total_event)
  
-  to_write = parse_line(base_time, second_total_ack, "Ack")
-  _write(out, to_write)
-  to_write = parse_line(base_time, second_total_event, "Event")
-  _write(out, to_write)
+  if not (second_total_ack == 0):
+      to_write = parse_line(base_time, second_total_ack, "AckSent")
+      _write(out, to_write)
+  if not (second_total_event == 0):
+      to_write = parse_line(base_time, second_total_event, "EventSent")
+      _write(out, to_write)
 
 if __name__ == "__main__":
   main(sys.argv[1:])
