@@ -10,7 +10,7 @@ end = sys.argv[4]
 jar_file=sys.argv[5]
 
 base_value = 420
-values = [420, 840, 1260, 2100, 4200, 8400, 16800, 33600, 67200]
+values = [16800, 33600, 67200]
 
 for value in values:
     if(value < base_value):
