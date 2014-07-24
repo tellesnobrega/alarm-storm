@@ -24,7 +24,7 @@ public class Main {
 		
 		TopologyBuilder builder = new TopologyBuilder();
 		builder.setSpout("source", new ConsumptionSpout(messagesPerSecond), numOfWorkers);
-		builder.setBolt("average", new AverageCalcBolt(), 3).setNumTasks(12).fieldsGrouping("source", new Fields("key"));
+		builder.setBolt("average", new AverageCalcBolt(), 4).setNumTasks(16).fieldsGrouping("source", new Fields("key"));
 		builder.setBolt("main/alarm", new AlarmBolt()).shuffleGrouping("average"); //shuffleGrouping(?)
 
 		Config conf = new Config();

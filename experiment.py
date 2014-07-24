@@ -6,9 +6,8 @@ import subprocess
 path = sys.argv[1]
 
 base_value = 420
-#values = [420, 840, 1260, 2100, 4200, 8400, 16800, 33600, 67200]
+values = [420, 840, 1260, 2100, 4200, 8400, 16800, 33600, 67200]
 
-values = [33600]
 for value in values:
     if(value < base_value):
         num_spouts=1
