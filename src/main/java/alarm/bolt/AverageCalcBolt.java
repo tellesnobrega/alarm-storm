@@ -26,8 +26,13 @@ public class AverageCalcBolt implements IRichBolt {
 	private List<Integer> measurements = new ArrayList<Integer>();
 	public OutputCollector _collector;
 	private static final Logger log = LoggerFactory.getLogger(AverageCalcBolt.class);
+    private boolean latency;
 
-	@Override
+    public AverageCalcBolt(boolean latency) {
+        this.latency = latency;
+    }
+
+    @Override
 	public void prepare(Map stormConf, TopologyContext context, OutputCollector collector) {
 		_collector = collector;
 	}
@@ -37,12 +42,17 @@ public class AverageCalcBolt implements IRichBolt {
 		Integer key = input.getIntegerByField("key");
 		Event event = (Event) input.getValue(input.fieldIndex("event"));
         int value = event.getValue();
+        long startTime = event.getTimestamp();
 		addMeasurement(value);
-        Date timestamp = new GregorianCalendar().getTime();
-        String timestamp_formated = LocalUtils.formatDate(timestamp);
+        Long timestamp = new GregorianCalendar().getTimeInMillis();
         Event average = new Event(calcAverage(), value, timestamp);
-		_collector.emit(new Values(average));
-        log.info("AckSent");
+        _collector.emit(new Values(average));
+        if(latency) {
+            long latency = timestamp - startTime;
+            log.info("AckSent;" + latency);
+        } else {
+            log.info("AckSent");
+        }
     }
 
 	@Override

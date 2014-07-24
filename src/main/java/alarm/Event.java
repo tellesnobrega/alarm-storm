@@ -8,24 +8,24 @@ public class Event implements Serializable {
 	private int average;
 	private int value;
 
-    private Date timestamp;
+    private Long timestamp;
 
-    public Event(int average, int value, Date timestamp) {
+    public Event(int average, int value, Long timestamp) {
 		this.average = average;
         this.value = value;
         this.timestamp = timestamp;
     }
 
-    public Event(int value, Date timestamp) {
+    public Event(int value, Long timestamp) {
         this.value = value;
         this.timestamp = timestamp;
     }
 
-	public int getAverage() {
+    public int getAverage() {
 		return average;
 	}
 
-    public Date getTimestamp() {
+    public Long getTimestamp() {
         return timestamp;
     }
 

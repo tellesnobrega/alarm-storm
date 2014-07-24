@@ -12,20 +12,29 @@ import main.java.alarm.spout.ConsumptionSpout;
 public class Main {
 	private static final long TEN_MIN = 10*60*1000;
 
-	public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
 		
 		int messagesPerSecond = Integer.parseInt(args[0]);
-		int numOfWorkers;
+        boolean latency = Boolean.parseBoolean(args[1]);
+
+
+		int spouts;
+        int bolts;
+        int tasks;
 		try{
-			numOfWorkers = Integer.parseInt(args[1]);
+			spouts = Integer.parseInt(args[2]);
+            bolts = Integer.parseInt(args[3]);
+            tasks = bolts * 3;
 		}catch(Exception e) {
-			numOfWorkers = 1;
+			spouts = 1;
+            bolts = 3;
+            tasks = 12;
 		}
-		
+
 		TopologyBuilder builder = new TopologyBuilder();
-		builder.setSpout("source", new ConsumptionSpout(messagesPerSecond), numOfWorkers);
-		builder.setBolt("average", new AverageCalcBolt(), 4).setNumTasks(16).fieldsGrouping("source", new Fields("key"));
-		builder.setBolt("main/alarm", new AlarmBolt()).shuffleGrouping("average"); //shuffleGrouping(?)
+		builder.setSpout("source", new ConsumptionSpout(messagesPerSecond, latency), spouts);
+		builder.setBolt("average", new AverageCalcBolt(latency), bolts).setNumTasks(tasks).fieldsGrouping("source", new Fields("key"));
+		builder.setBolt("main/alarm", new AlarmBolt()).shuffleGrouping("average");
 
 		Config conf = new Config();
 		conf.put(Config.TOPOLOGY_DEBUG, false);

@@ -27,11 +27,13 @@ public class ConsumptionSpout implements IRichSpout {
 	public SpoutOutputCollector _collector;
     private static final Logger log = LoggerFactory.getLogger(ConsumptionSpout.class);
     private long sleepTime;
+    boolean latency;
 	
 
-    public ConsumptionSpout(int measuresPerSec) {
+    public ConsumptionSpout(int measuresPerSec, boolean latency) {
 		this.sleepTime = ONE_SEC/measuresPerSec;
 		rand = new Random();
+        this.latency = latency;
 	}
     
 	@Override
@@ -54,13 +56,14 @@ public class ConsumptionSpout implements IRichSpout {
 
 		int key = rand.nextInt(10);
         int value = rand.nextInt(100);
-        Date timestamp = new GregorianCalendar().getTime();
-        String timestamp_formated = LocalUtils.formatDate(timestamp);
+        Long timestamp = new GregorianCalendar().getTimeInMillis();
         Event event = new Event(value, timestamp);
         String id = key+";"+value;
 		_collector.emit(new Values(key, event));
-		String output = "EventSent";
-		log.info(output);
+		if(!latency) {
+            String output = "EventSent";
+    		log.info(output);
+        }
 	}
 
 	@Override

@@ -154,7 +154,7 @@ create_frame = function(list_messages) {
   return(analysis_final)
 }
 
-root_path = "/local/storm/experimentos/experimento1/"
+root_path = "experimento1"
 list_messages = c(420, 840, 1260, 2100, 4200, 8400, 16800, 33600, 67200)
 analysis_table = create_frame(list_messages)
 
@@ -164,22 +164,28 @@ data_2 = subset(analysis_table, By10 == 2)
 data_3 = subset(analysis_table, By10 == 3)
 
 ggplot(data_0, aes(x=seq_along(Ack_Mean), y=Ack_Mean)) + geom_line() +
-  geom_errorbar(aes(ymin=Ack_Mean-Ack_Min, ymax=Ack_Mean+Ack_Max), width=.2) +
+  geom_errorbar(aes(ymin=Ack_Min, ymax=Ack_Max), width=.2) +
+  geom_point() +
+  ggtitle(expression(atop("Mean of Throughput in Storm by # of Messages/s"))) +
+  ylab("Mean of Acks/s") +
+  scale_x_discrete(name="Messages/s", breaks=seq_along(data_0$Ack_Mean),labels=data_0$MessagesPerSecond)+
+  theme(axis.text.x=element_text(angle=90))
+
+ggplot(data_1, aes(x=MessagesPerSecond, y=Ack_Mean)) + geom_line() +
+  geom_errorbar(aes(ymin=Ack_Min, ymax=Ack_Max), width=1500) +
   geom_point()
-ggplot(data_1, aes(x=seq_along(Ack_Mean), y=Ack_Mean)) + geom_line() +
-  geom_errorbar(aes(ymin=Ack_Mean-Ack_Min, ymax=Ack_Mean+Ack_Max), width=.2) +
-  geom_point()
-ggplot(data_2, aes(x=seq_along(Ack_Mean), y=Ack_Mean)) + geom_line() +
-  geom_errorbar(aes(ymin=Ack_Mean-Ack_Min, ymax=Ack_Mean+Ack_Max), width=.2) +
+ggplot(data_2, aes(x=MessagesPerSecond, y=Ack_Mean)) + geom_line() +
+  geom_errorbar(aes(ymin=Ack_Min, ymax=Ack_Max), width=1000) +
   geom_point()
 ggplot(data_3, aes(x=seq_along(Ack_Mean), y=Ack_Mean)) + geom_line() +
-  geom_errorbar(aes(ymin=Ack_Mean-Ack_Min, ymax=Ack_Mean+Ack_Max), width=.2) +
+  geom_errorbar(aes(ymin=Ack_Min, ymax=Ack_Max), width=.2) +
   geom_point()
 
-# ggplot(data_0, aes(x=MessagesPerSecond, y=Ack_Mean, colour="red")) + 
-#   geom_errorbar(aes(ymin=Ack_Mean-(Ack_SD*1.96), ymax=Ack_Mean+(Ack_SD*1.96), width=1000) +
-#   geom_point()
 
-  
-  
-  
+ggplot(analysis_table, aes(x=log(MessagesPerSecond), y=Ack_Mean,colour=By10, group=By10)) + geom_line() +
+  geom_errorbar(aes(ymin=Ack_Mean, ymax=Ack_Mean), width=.2) +
+  geom_point()
+
+ggplot(analysis_table, aes(x=seq_along(Event_Mean), y=Event_Mean,colour=By10, group=By10)) + geom_line() +
+  geom_errorbar(aes(ymin=Event_Mean-Event_Min, ymax=Event_Mean+Event_Max), width=.2) +
+  geom_point()
