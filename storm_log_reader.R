@@ -294,7 +294,7 @@ ad.test(data_2100$Ack_Mean)
 ad.test(data_4200$Ack_Mean)
 ad.test(data_8400$Ack_Mean)
 ad.test(data_16800$Ack_Mean)
-ad.test(data_33600$Ack_Mean)
+ad.test(data_3300$Ack_Mean)
 ad.test(data_67200$Ack_Mean)
 
 bar0= ggplot(data_0, aes(x=as.factor(seq_along(Ack_Mean)), y=Ack_Mean,fill=as.factor(MessagesPerSecond))) + geom_bar(stat="identity") + 
@@ -326,10 +326,6 @@ multiplot(bar0,bar1,bar2,bar3, cols=2)
 #   geom_errorbar(aes(ymin=Ack_Mean-(Ack_SD*1.96), ymax=Ack_Mean+(Ack_SD*1.96), width=1000) +
 #   geom_point()
 
-ggplot(analysis_table, aes(x=log(MessagesPerSecond), y=Ack_Mean,colour=By10, group=By10)) + geom_line() +
-  geom_errorbar(aes(ymin=Ack_Mean, ymax=Ack_Mean), width=.2) +
-  geom_point()
-
-ggplot(analysis_table, aes(x=seq_along(Event_Mean), y=Event_Mean,colour=By10, group=By10)) + geom_line() +
-  geom_errorbar(aes(ymin=Event_Mean-Event_Min, ymax=Event_Mean+Event_Max), width=.2) +
-  geom_point()
+  
+  
+  
