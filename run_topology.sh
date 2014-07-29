@@ -4,17 +4,21 @@ MESSAGES_PER_SECOND=$2
 NUM_SPOUTS=$3
 STORAGE_FOLDER=$4
 PEM_FILE=$5
+NIMBUS_HOST=$6
+INIT=$7
+END=$8
+JAR_FILE=$9
 
 mkdir -p $STORAGE_FOLDER
 
-/usr/local/storm/bin/storm jar target/alarm-storm.jar main.java.alarm.Main $MESSAGES_PER_SECOND $NUM_SPOUTS &
+/usr/local/storm/bin/storm jar -c nimbus.host=$NIMBUS_HOST $JAR_FILE main.java.alarm.Main $MESSAGES_PER_SECOND $NUM_SPOUTS &
 
 sleep "$RUNNING_TIME"m
 
-/usr/local/storm/bin/storm kill sg-app-storm
+/usr/local/storm/bin/storm kill -c nimbus.host=$NIMBUS_HOST sg-app-storm
 
 #Copy files to folder
-for i in {1..7}
+for i in $(eval echo {$INIT..$END})
 do
     for j in {0..3}
     do
@@ -22,16 +26,16 @@ do
     done
 done
 
-for i in {1..7}
+for i in $(eval echo {$INIT..$END})
 do
     for j in {0..3}
     do
-        if [ -f $STORAGE_FOLDER/worker-$j.$i.log ];
-        then
-            python parser.py $STORAGE_FOLDER/worker-$j.$i.log $STORAGE_FOLDER/worker-trimmed-$j-$i.log
-        else
-            echo "hour;minute;second;event;total" > $STORAGE_FOLDER/worker-trimmed-$j-$i.log
-        fi
+       if [ -f $STORAGE_FOLDER/worker-$j.$i.log ];
+       then
+           python parser.py $STORAGE_FOLDER/worker-$j.$i.log $STORAGE_FOLDER/worker-trimmed-$j-$i.log
+       else
+           echo "hour;minute;second;event;total" > $STORAGE_FOLDER/worker-trimmed-$j-$i.log
+       fi
     done
 done
 
@@ -42,7 +46,7 @@ done
 #done 
 
 #Delete files from remote
-for i in {1..7}
+for i in $(eval echo {$INIT..$END})
 do
     ssh -i $PEM_FILE ubuntu@telles-storm-slave$i 'sudo rm -rf /usr/local/storm/logs/worker-6700.log'
     ssh -i $PEM_FILE ubuntu@telles-storm-slave$i 'sudo rm -rf /usr/local/storm/logs/worker-6701.log'

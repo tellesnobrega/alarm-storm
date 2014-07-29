@@ -27,7 +27,7 @@
 	</target>
 
 	<target name="jar" depends="compile">
-		<jar destfile="${target.dir}/${ant.project.name}-latency.jar" basedir="${classes.dir}"/>
+		<jar destfile="${target.dir}/${ant.project.name}-scalable.jar" basedir="${classes.dir}"/>
 	</target>
 
 	<target name="package" depends="jar">
