@@ -2,12 +2,14 @@
 RUNNING_TIME=$1
 MESSAGES_PER_SECOND=$2
 NUM_SPOUTS=$3
-STORAGE_FOLDER=$4
-PEM_FILE=$5
+NUM_BOLTS=$4
+LATENCY=$5
+STORAGE_FOLDER=$6
+PEM_FILE=$7
 
 mkdir -p $STORAGE_FOLDER
 
-/usr/local/storm/bin/storm jar target/alarm-storm.jar main.java.alarm.Main $MESSAGES_PER_SECOND $NUM_SPOUTS &
+/usr/local/storm/bin/storm jar target/alarm-storm.jar main.java.alarm.Main $MESSAGES_PER_SECOND $LATENCY $NUM_SPOUTS $NUM_BOLTS &
 
 sleep "$RUNNING_TIME"m
 
@@ -26,12 +28,22 @@ for i in {1..7}
 do
     for j in {0..3}
     do
-        if [ -f $STORAGE_FOLDER/worker-$j.$i.log ];
-        then
-            python parser.py $STORAGE_FOLDER/worker-$j.$i.log $STORAGE_FOLDER/worker-trimmed-$j-$i.log
-        else
-            echo "hour;minute;second;event;total" > $STORAGE_FOLDER/worker-trimmed-$j-$i.log
-        fi
+       if [ "$LATENCY" == "true" ];
+       then
+           if [ -f $STORAGE_FOLDER/worker-$j.$i.log ];
+           then
+               python latency_parser.py $STORAGE_FOLDER/worker-$j.$i.log $STORAGE_FOLDER/worker-trimmed-$j-$i.log
+           else
+               echo "hour;minute;second;latency" > $STORAGE_FOLDER/worker-trimmed-$j-$i.log
+           fi
+       else
+           if [ -f $STORAGE_FOLDER/worker-$j.$i.log ];
+           then
+               python parser.py $STORAGE_FOLDER/worker-$j.$i.log $STORAGE_FOLDER/worker-trimmed-$j-$i.log
+           else
+               echo "hour;minute;second;event;total" > $STORAGE_FOLDER/worker-trimmed-$j-$i.log
+           fi
+       fi
     done
 done
 

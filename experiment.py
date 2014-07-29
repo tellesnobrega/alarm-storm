@@ -4,9 +4,11 @@ import sys, getopt
 import subprocess
 
 path = sys.argv[1]
+num_bolts = sys.argv[2]
+latency = sys.argv[3]
 
 base_value = 420
-values = [420, 840, 1260, 2100, 4200, 8400, 16800, 33600, 67200]
+values = [420, 1260, 2100, 4200, 8400, 16800, 25200, 33600]
 
 for value in values:
     if(value < base_value):
@@ -14,7 +16,7 @@ for value in values:
     else:
         num_spouts=(value/base_value)
 
-    storage_path=path+"/%s" % str(value)
-    process = subprocess.Popen(["./run_topology.sh 41 500 %s %s ~/Downloads/telles.pem" % (str(num_spouts), storage_path)], shell=True)
-
-    process.wait()
+    for i in range(4):
+        storage_path=path+"/%s/%s" % (str(value), str(i))
+        process = subprocess.Popen(["./run_topology.sh 12 500 %s %s %s %s ~/Downloads/telles.pem" % (str(num_spouts), str(num_bolts), str(latency),  storage_path)], shell=True)
+        process.wait()
