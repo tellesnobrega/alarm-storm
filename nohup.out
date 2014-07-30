@@ -1,0 +1,1285 @@
+307  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+316  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-2b8861c0-f991-4c23-b482-a8acdb086ed9.jar
+324  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-2b8861c0-f991-4c23-b482-a8acdb086ed9.jar
+324  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+434  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1088 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1122 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+318  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+328  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-7954da83-f139-4d64-9a0d-717152b1f61f.jar
+335  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-7954da83-f139-4d64-9a0d-717152b1f61f.jar
+336  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+447  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1071 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1105 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+309  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+315  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-6c2843d3-50dd-4f92-b146-1644d05db338.jar
+322  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-6c2843d3-50dd-4f92-b146-1644d05db338.jar
+322  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+412  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1143 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1175 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+322  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+328  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-2fefeea2-9201-4815-a8d6-7e9d8a510421.jar
+336  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-2fefeea2-9201-4815-a8d6-7e9d8a510421.jar
+336  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+423  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1358 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1406 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+307  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+315  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-1ff17ec5-2c03-4281-948f-87a72138ade4.jar
+322  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-1ff17ec5-2c03-4281-948f-87a72138ade4.jar
+323  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+409  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1166 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1201 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+317  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+323  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-6dd7922d-30e6-4fae-ba53-6e7ad2937960.jar
+330  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-6dd7922d-30e6-4fae-ba53-6e7ad2937960.jar
+330  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+417  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1121 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1147 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+307  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+316  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-aaaa22e2-2581-4aff-8185-9a43339a88f2.jar
+324  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-aaaa22e2-2581-4aff-8185-9a43339a88f2.jar
+324  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+414  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1226 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1272 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+311  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+317  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-7d947ff7-dfa7-470e-a2eb-bfa971dfed52.jar
+326  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-7d947ff7-dfa7-470e-a2eb-bfa971dfed52.jar
+326  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+422  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1098 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1145 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+330  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+336  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-0817c80f-cf7e-4d97-bce5-1ed5fda19d03.jar
+344  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-0817c80f-cf7e-4d97-bce5-1ed5fda19d03.jar
+344  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+451  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1091 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1124 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+316  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+323  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-499e64b3-0cd6-4060-9fcc-262f06ee6b1f.jar
+330  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-499e64b3-0cd6-4060-9fcc-262f06ee6b1f.jar
+330  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+415  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1087 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1120 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+378  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+386  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-7f63def9-eafa-41e2-8e2f-7d5ee329baca.jar
+394  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-7f63def9-eafa-41e2-8e2f-7d5ee329baca.jar
+394  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+511  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1145 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1185 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+364  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+371  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-c2314141-7f14-41c8-baf0-750fb5c43809.jar
+379  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-c2314141-7f14-41c8-baf0-750fb5c43809.jar
+379  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+483  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1099 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1130 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+310  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+317  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-5337c703-f230-4fe4-bbb1-4593bd5b67f1.jar
+324  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-5337c703-f230-4fe4-bbb1-4593bd5b67f1.jar
+324  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+431  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1119 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1147 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+337  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+343  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-1757eb1b-aa10-47c0-9671-9d1eb14e761d.jar
+350  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-1757eb1b-aa10-47c0-9671-9d1eb14e761d.jar
+350  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+461  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1135 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1168 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+317  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+324  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-d6168abc-17d7-475d-9d56-bf672698f8a7.jar
+332  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-d6168abc-17d7-475d-9d56-bf672698f8a7.jar
+332  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+469  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1088 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1119 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+311  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+317  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-b2a25f6c-90a2-4cda-8fef-a1844f328fed.jar
+325  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-b2a25f6c-90a2-4cda-8fef-a1844f328fed.jar
+325  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+434  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1080 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1113 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+364  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+373  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-fe7aa0b4-dde5-40f4-a742-abcf4ac1fd0f.jar
+382  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-fe7aa0b4-dde5-40f4-a742-abcf4ac1fd0f.jar
+382  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+509  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1090 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1127 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+315  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+324  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-0ac1489e-cc46-4ee0-94df-fe6586520e31.jar
+332  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-0ac1489e-cc46-4ee0-94df-fe6586520e31.jar
+332  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+432  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1166 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1199 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+313  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+321  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-56a0e727-d824-48ba-834b-6d553405b742.jar
+329  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-56a0e727-d824-48ba-834b-6d553405b742.jar
+329  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+465  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1212 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1251 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+382  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+392  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-2e6af36a-ada0-4275-b29e-24b460f82434.jar
+402  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-2e6af36a-ada0-4275-b29e-24b460f82434.jar
+402  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+517  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1090 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1121 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+312  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+320  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-151250ba-9656-41d6-b47a-acabf8f86efa.jar
+327  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-151250ba-9656-41d6-b47a-acabf8f86efa.jar
+328  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+433  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1311 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1343 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+322  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+330  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-ceac996d-5d92-4261-83d2-5362016a3b99.jar
+339  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-ceac996d-5d92-4261-83d2-5362016a3b99.jar
+339  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+442  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1089 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1128 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+315  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+323  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-a1266332-3a2e-4f50-b457-c566eb8c5da5.jar
+331  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-a1266332-3a2e-4f50-b457-c566eb8c5da5.jar
+331  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+449  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1149 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1185 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+316  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+324  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-58101dbe-7c1d-4044-aac0-1f3da58c2449.jar
+332  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-58101dbe-7c1d-4044-aac0-1f3da58c2449.jar
+332  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+432  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1238 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1267 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+339  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+347  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-250beb34-044e-4417-b22a-2ceb7e16fba4.jar
+354  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-250beb34-044e-4417-b22a-2ceb7e16fba4.jar
+354  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+487  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1163 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1201 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+334  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+340  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-61b48277-2198-42fa-b4a9-c9669e9a4a0b.jar
+349  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-61b48277-2198-42fa-b4a9-c9669e9a4a0b.jar
+350  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+458  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1405 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1442 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+397  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+404  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-f77a08c1-ba28-4349-a003-327cee5c61b0.jar
+411  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-f77a08c1-ba28-4349-a003-327cee5c61b0.jar
+412  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+515  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1093 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1162 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+320  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+327  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-968093ae-60b6-4bd1-8ba5-bd72969a720b.jar
+336  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-968093ae-60b6-4bd1-8ba5-bd72969a720b.jar
+336  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+447  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1089 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1122 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+310  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+316  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-7be47009-6eb6-4b79-9841-97eb7338a8a7.jar
+324  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-7be47009-6eb6-4b79-9841-97eb7338a8a7.jar
+324  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+461  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1098 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1154 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+320  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+327  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-773221b5-f061-4b75-aff5-f1aff4e8ce25.jar
+334  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-773221b5-f061-4b75-aff5-f1aff4e8ce25.jar
+334  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+453  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1167 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1205 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave1 port 22: No route to host
+ssh: connect to host telles-storm-slave1 port 22: No route to host
+ssh: connect to host telles-storm-slave1 port 22: No route to host
+ssh: connect to host telles-storm-slave1 port 22: No route to host
+ssh: connect to host telles-storm-slave2 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+314  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+320  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-e2c8bd6f-14aa-43b7-b3c2-5728c1185ebc.jar
+328  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-e2c8bd6f-14aa-43b7-b3c2-5728c1185ebc.jar
+328  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+415  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1229 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1261 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+324  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+331  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-01c30b96-0038-40eb-858e-747e93617e6f.jar
+339  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-01c30b96-0038-40eb-858e-747e93617e6f.jar
+339  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+454  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1206 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1245 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+318  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+327  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-ded72280-4a85-4166-bd25-273a510bd4cb.jar
+339  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-ded72280-4a85-4166-bd25-273a510bd4cb.jar
+339  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+490  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1181 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1212 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+310  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+316  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-63b8eedd-b61c-4175-8ac0-0a4698a8a5f1.jar
+324  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-63b8eedd-b61c-4175-8ac0-0a4698a8a5f1.jar
+324  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+443  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1511 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1541 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+346  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+353  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-92179522-c39c-4c2e-b6ec-4a4d1d0e8332.jar
+360  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-92179522-c39c-4c2e-b6ec-4a4d1d0e8332.jar
+360  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+470  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1077 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1121 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+318  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+325  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-586b8e35-de26-4306-b3e7-f0bea44c3aa3.jar
+332  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-586b8e35-de26-4306-b3e7-f0bea44c3aa3.jar
+333  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+456  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1122 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1153 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+342  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+348  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-0909e473-05c6-473c-a38b-010b27334645.jar
+357  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-0909e473-05c6-473c-a38b-010b27334645.jar
+357  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+494  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1165 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1194 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+318  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+324  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-a74ae038-9811-4043-90b6-c54d1fc8e4f7.jar
+331  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-a74ae038-9811-4043-90b6-c54d1fc8e4f7.jar
+331  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+437  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1110 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1139 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+311  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+321  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-d6294752-187c-4fb1-b4e4-70c4edf2c7af.jar
+330  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-d6294752-187c-4fb1-b4e4-70c4edf2c7af.jar
+330  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+430  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1515 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1560 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+318  [main] INFO  backtype.storm.StormSubmitter - Jar not uploaded to master yet. Submitting jar...
+326  [main] INFO  backtype.storm.StormSubmitter - Uploading topology jar target/alarm-storm.jar to assigned location: /app/storm/nimbus/inbox/stormjar-23f3453c-f3d9-49b9-8865-1a7b85b35992.jar
+334  [main] INFO  backtype.storm.StormSubmitter - Successfully uploaded topology jar to assigned location: /app/storm/nimbus/inbox/stormjar-23f3453c-f3d9-49b9-8865-1a7b85b35992.jar
+334  [main] INFO  backtype.storm.StormSubmitter - Submitting topology sg-app-storm in distributed mode with conf {"topology.workers":7,"topology.debug":false}
+453  [main] INFO  backtype.storm.StormSubmitter - Finished submitting topology: sg-app-storm
+1113 [main] INFO  backtype.storm.thrift - Connecting to Nimbus at telles-storm-nimbus:6627
+1151 [main] INFO  backtype.storm.command.kill-topology - Killed topology: sg-app-storm
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6700.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6701.log: No such file or directory
+scp: /usr/local/storm/logs/worker-6702.log: No such file or directory
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
+ssh: connect to host telles-storm-slave5 port 22: No route to host
