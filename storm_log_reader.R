@@ -1,6 +1,7 @@
 require(plyr)
 require(ggplot2)
 require(Rmisc)
+require(nortest)
 metrics = function(directory, separator) {
   
   dados_0 = read_data(directory, 0, separator)
@@ -164,56 +165,111 @@ run = function(type) {
                            analysis_table_25200,
                            analysis_table_33600)
   
-  final_table = ddply(grouped_analysis, 
-                      .(MessagesPerSecond), 
-                      summarize, 
-                      ack_mean=mean(mean_ack), 
-                      ack_sd=sd(mean_ack),
-                      ack_min=CI(mean_ack)[3],
-                      ack_max=CI(mean_ack)[1],
-                      event_mean=mean(mean_event),
-                      event_sd=sd(mean_event),
-                      event_min=CI(mean_event)[3],
-                      event_max=CI(mean_event)[1])
-  
-  return(final_table)
+  return(grouped_analysis)
   
 }
 
-data1 = run("scalability")
-data2 = run("throughput")
 
-data1$index = seq_along(data1$ack_mean)
-data2$index = seq_along(data2$ack_mean)
 
-data1$type = "scalability"
-data2$type = "throughput"
+scalability = run("scalability")
 
-data_final = rbind(data1, data2)
+scalability_grouped = ddply(scalability,
+                            .(MessagesPerSecond), 
+                            summarize, 
+                            ack_mean=mean(mean_ack), 
+                            ack_sd=sd(mean_ack),
+                            ack_min=CI(mean_ack)[3],
+                            ack_max=CI(mean_ack)[1],
+                            event_mean=mean(mean_event),
+                            event_sd=sd(mean_event),
+                            event_min=CI(mean_event)[3],
+                            event_max=CI(mean_event)[1])
 
-###Plot
-p1 = qplot(sample = list_data_420$mean_ack,  stat = "qq") + ggtitle(expression("420 Mensagens"))
-p2 = qplot(sample = data_840$Ack_Mean,  stat = "qq") + ggtitle(expression("840 Mensagens"))
-p3 = qplot(sample = data_1260$Ack_Mean,  stat = "qq") + ggtitle(expression("1260 Mensagens"))
-p4 = qplot(sample = data_2100$Ack_Mean,  stat = "qq") + ggtitle(expression("2100 Mensagens"))
-p5 = qplot(sample = data_4200$Ack_Mean,  stat = "qq") + ggtitle(expression("4200 Mensagens"))
-p6 = qplot(sample = data_8400$Ack_Mean,  stat = "qq") + ggtitle(expression("8400 Mensagens"))
-p7 = qplot(sample = data_16800$Ack_Mean,  stat = "qq") + ggtitle(expression("16800 Mensagens"))
-p8 = qplot(sample = data_33600$Ack_Mean,  stat = "qq") + ggtitle(expression("33600 Mensagens"))
-p9 = qplot(sample = data_67200$Ack_Mean,  stat = "qq") + ggtitle(expression("67200 Mensagens"))
+throughput = run("throughput")
 
-multiplot(p1, p2, p3, p4, p5, p6, p7, p8, p9, cols=3)
+throughput_grouped = ddply(throughput, 
+                          .(MessagesPerSecond), 
+                          summarize, 
+                          ack_mean=mean(mean_ack), 
+                          ack_sd=sd(mean_ack),
+                          ack_min=CI(mean_ack)[3],
+                          ack_max=CI(mean_ack)[1],
+                          event_mean=mean(mean_event),
+                          event_sd=sd(mean_event),
+                          event_min=CI(mean_event)[3],
+                          event_max=CI(mean_event)[1])
 
-shapiro.test(data_420$Ack_Mean)
-shapiro.test(data_840$Ack_Mean)
-shapiro.test(data_1260$Ack_Mean)
-shapiro.test(data_2100$Ack_Mean)
-shapiro.test(data_4200$Ack_Mean)
-shapiro.test(data_8400$Ack_Mean)
-shapiro.test(data_16800$Ack_Mean)
-shapiro.test(data_33600$Ack_Mean)
-shapiro.test(data_67200$Ack_Mean)
+scalability_grouped$index = seq_along(scalability_grouped$ack_mean)
+throughput_grouped$index = seq_along(throughput_grouped$ack_mean)
 
+scalability_grouped$type = "scalability"
+throughput_grouped$type = "throughput"
+
+data_final = rbind(scalability_grouped, throughput_grouped)
+
+###Normality Test Scalability
+
+data_scalability_420 = subset(scalability, scalability$MessagesPerSecond == 420)$mean_ack
+data_scalability_1260 = subset(scalability, scalability$MessagesPerSecond == 1260)$mean_ack
+data_scalability_2100 = subset(scalability, scalability$MessagesPerSecond == 2100)$mean_ack
+data_scalability_4200 = subset(scalability, scalability$MessagesPerSecond == 4200)$mean_ack
+data_scalability_8400 = subset(scalability, scalability$MessagesPerSecond == 8400)$mean_ack
+data_scalability_16800 = subset(scalability, scalability$MessagesPerSecond == 16800)$mean_ack
+data_scalability_25200 = subset(scalability, scalability$MessagesPerSecond == 25200)$mean_ack
+data_scalability_33600 = subset(scalability, scalability$MessagesPerSecond == 33600)$mean_ack
+
+
+p1 = qplot(sample = data_scalability_420,  stat = "qq") + ggtitle(expression("420 Mensagens"))
+p2 = qplot(sample = data_scalability_1260,  stat = "qq") + ggtitle(expression("1260 Mensagens"))
+p3 = qplot(sample = data_scalability_2100,  stat = "qq") + ggtitle(expression("2100 Mensagens"))
+p4 = qplot(sample = data_scalability_4200,  stat = "qq") + ggtitle(expression("4200 Mensagens"))
+p5 = qplot(sample = data_scalability_8400,  stat = "qq") + ggtitle(expression("8400 Mensagens"))
+p6 = qplot(sample = data_scalability_16800,  stat = "qq") + ggtitle(expression("16800 Mensagens"))
+p7 = qplot(sample = data_scalability_25200,  stat = "qq") + ggtitle(expression("25200 Mensagens"))
+p8 = qplot(sample = data_scalability_33600,  stat = "qq") + ggtitle(expression("33600 Mensagens"))
+
+multiplot(p1, p2, p3, p4, p5, p6, p7, p8, cols=4)
+
+ad.test(data_scalability_420)
+ad.test(data_scalability_1260)
+ad.test(data_scalability_2100)
+ad.test(data_scalability_4200)
+ad.test(data_scalability_8400)
+ad.test(data_scalability_16800)
+ad.test(data_scalability_25200)
+ad.test(data_scalability_33600)
+
+###Normality Test Throughput
+
+data_throughput_420 = subset(throughput, throughput$MessagesPerSecond == 420)$mean_ack
+data_throughput_1260 = subset(throughput, throughput$MessagesPerSecond == 1260)$mean_ack
+data_throughput_2100 = subset(throughput, throughput$MessagesPerSecond == 2100)$mean_ack
+data_throughput_4200 = subset(throughput, throughput$MessagesPerSecond == 4200)$mean_ack
+data_throughput_8400 = subset(throughput, throughput$MessagesPerSecond == 8400)$mean_ack
+data_throughput_16800 = subset(throughput, throughput$MessagesPerSecond == 16800)$mean_ack
+data_throughput_25200 = subset(throughput, throughput$MessagesPerSecond == 25200)$mean_ack
+data_throughput_33600 = subset(throughput, throughput$MessagesPerSecond == 33600)$mean_ack
+
+
+p1 = qplot(sample = data_throughput_420,  stat = "qq") + ggtitle(expression("420 Mensagens"))
+p2 = qplot(sample = data_throughput_1260,  stat = "qq") + ggtitle(expression("1260 Mensagens"))
+p3 = qplot(sample = data_throughput_2100,  stat = "qq") + ggtitle(expression("2100 Mensagens"))
+p4 = qplot(sample = data_throughput_4200,  stat = "qq") + ggtitle(expression("4200 Mensagens"))
+p5 = qplot(sample = data_throughput_8400,  stat = "qq") + ggtitle(expression("8400 Mensagens"))
+p6 = qplot(sample = data_throughput_16800,  stat = "qq") + ggtitle(expression("16800 Mensagens"))
+p7 = qplot(sample = data_throughput_25200,  stat = "qq") + ggtitle(expression("25200 Mensagens"))
+p8 = qplot(sample = data_throughput_33600,  stat = "qq") + ggtitle(expression("33600 Mensagens"))
+
+multiplot(p1, p2, p3, p4, p5, p6, p7, p8, cols=4)
+
+ad.test(data_throughput_420)
+ad.test(data_throughput_1260)
+ad.test(data_throughput_2100)
+ad.test(data_throughput_4200)
+ad.test(data_throughput_8400)
+ad.test(data_throughput_16800)
+ad.test(data_throughput_25200)
+ad.test(data_throughput_33600)
 
 
 
@@ -232,10 +288,3 @@ dev.off()
 # ggplot(data_0, aes(x=MessagesPerSecond, y=Ack_Mean, colour="red")) + 
 #   geom_errorbar(aes(ymin=Ack_Mean-(Ack_SD*1.96), ymax=Ack_Mean+(Ack_SD*1.96), width=1000) +
 #   geom_point()
-
-
-
-
-data_final = rbind(data1, data2)
-print(data_final)
-

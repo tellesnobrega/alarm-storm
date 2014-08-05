@@ -1,8 +1,8 @@
 require(plyr)
 require(ggplot2)
 require(Rmisc)
-require(nortest
-        )
+require(nortest)
+
 metrics = function(directory, separator) {
   
   dados_0 = read_data(directory, 0, separator)
@@ -12,7 +12,7 @@ metrics = function(directory, separator) {
   
   dados = rbind(dados_0, dados_1, dados_2, dados_3)
   
-  grouped = ddply(dados, .(hour,minute,second,event), summarize,total = sum(total))
+  grouped = ddply(dados, .(hour,minute,second), summarize, latency = sum(latency))
   
   return(grouped)
   
@@ -27,21 +27,16 @@ read_data = function(directory, number, separator) {
   dados_6 = read.csv(paste(directory,paste("worker-trimmed",number,"6.log",sep="-"), sep="/"), sep=separator, header = TRUE)
   dados_7 = read.csv(paste(directory,paste("worker-trimmed",number,"7.log",sep="-"), sep="/"), sep=separator, header = TRUE)
   
-  dados_trimmed_1 = ddply(dados_1, .(hour, minute, second), summarize, total=sum(total))
-  dados_trimmed_2 = ddply(dados_2, .(hour, minute, second), summarize, total=sum(total))
-  dados_trimmed_3 = ddply(dados_3, .(hour, minute, second), summarize, total=sum(total))
-  dados_trimmed_4 = ddply(dados_4, .(hour, minute, second), summarize, total=sum(total))
-  dados_trimmed_5 = ddply(dados_5, .(hour, minute, second), summarize, total=sum(total))
-  dados_trimmed_6 = ddply(dados_6, .(hour, minute, second), summarize, total=sum(total))
-  dados_trimmed_7 = ddply(dados_7, .(hour, minute, second), summarize, total=sum(total))
+  dados_trimmed_1 = ddply(dados_1, .(hour, minute, second), summarize, latency=sum(latency))
+  dados_trimmed_2 = ddply(dados_2, .(hour, minute, second), summarize, latency=sum(latency))
+  dados_trimmed_3 = ddply(dados_3, .(hour, minute, second), summarize, latency=sum(latency))
+  dados_trimmed_4 = ddply(dados_4, .(hour, minute, second), summarize, latency=sum(latency))
+  dados_trimmed_5 = ddply(dados_5, .(hour, minute, second), summarize, latency=sum(latency))
+  dados_trimmed_6 = ddply(dados_6, .(hour, minute, second), summarize, latency=sum(latency))
+  dados_trimmed_7 = ddply(dados_7, .(hour, minute, second), summarize, latency=sum(latency))
   
   dados_trimmed = rbind(dados_trimmed_1, dados_trimmed_2, dados_trimmed_3, dados_trimmed_4, dados_trimmed_5, dados_trimmed_6, dados_trimmed_7)
   return(dados_trimmed)
-}
-
-get_event_df = function(dff) {
-  event = subset(dff, event=="EventSent", row.names = FALSE)
-  return(event)
 }
 
 get_ack_df = function(dff) {
@@ -58,7 +53,7 @@ trim_df = function(dff) {
 group_df_by_1_minute = function(dff) {
   count=0
   group=0
-  for(row in 1:length(dff$total)) {
+  for(row in 1:length(dff$latency)) {
     count = count + 1
     dff$By1[row] = as.numeric(group)
     if(count == 60) {
@@ -80,17 +75,17 @@ remove_last_minute = function(dff){
 }
 
 analysis = function(df_ack, num_messages, dff) {
-  data_ack = data.frame(mean_ack=mean(df_ack$total))
+  data_ack = data.frame(latency=mean(df_ack$latency))
   
   data_ack$MessagesPerSecond = num_messages
   
-  dff <- rbind(dff, new_df)
+  dff <- rbind(dff, data_ack)
   return(dff)
 }
 create_frame = function(root_path, list_dados, messages) {
   analysis_final = data.frame(MessagesPerSecond=numeric())
   for (dados in list_dados) {
-    dados_ack = trim_df(get_ack_df(dados))
+    dados_ack = trim_df(dados)
     analysis_final = analysis(dados_ack, messages, analysis_final)
   }
   return(analysis_final)
@@ -122,7 +117,7 @@ run = function() {
   
   analysis_table_1260= create_frame(root_path, list_data_1260, 1260)
   analysis_table_8400= create_frame(root_path, list_data_8400, 8400)
-  analysis_table_15000= create_frame(root_path, list_data_25200, 10500)
+  analysis_table_10500= create_frame(root_path, list_data_10500, 10500)
   analysis_table_16800= create_frame(root_path, list_data_16800, 16800)
   
   grouped_analysis = rbind(analysis_table_1260,
@@ -130,71 +125,67 @@ run = function() {
                            analysis_table_10500,
                            analysis_table_16800)
   
-  final_table = ddply(grouped_analysis, 
-                      .(MessagesPerSecond), 
-                      summarize, 
-                      ack_mean=mean(mean_ack), 
-                      ack_sd=sd(mean_ack),
-                      ack_min=CI(mean_ack)[3],
-                      ack_max=CI(mean_ack)[1],
-                      event_mean=mean(mean_event),
-                      event_sd=sd(mean_event),
-                      event_min=CI(mean_event)[3],
-                      event_max=CI(mean_event)[1])
+#   final_table = ddply(grouped_analysis, 
+#                       .(MessagesPerSecond), 
+#                       summarize, 
+#                       latency_mean=mean(latency), 
+#                       latency_sd=sd(latency),
+#                       latency_min=CI(latency)[3],
+#                       latency_max=CI(latency)[1])
   
-  return(final_table)
-  
-}
-
+  return(grouped_analysis)
+}  
 
 data = run()
+data_ic = ddply(grouped_analysis, 
+                .(MessagesPerSecond), 
+                summarize, 
+                latency_mean=mean(latency), 
+                latency_sd=sd(latency),
+                latency_min=CI(latency)[3],
+                latency_max=CI(latency)[1])
 
-data_final = rbind(data1, data2)
-
+data$index = seq_along(data$MessagesPerSecond)
 
 ###Plot
-p1 = qplot(sample = data_840$Ack_Mean,  stat = "qq") + ggtitle(expression("840 Mensagens"))
-p2 = qplot(sample = data_8400$Ack_Mean,  stat = "qq") + ggtitle(expression("8400 Mensagens"))
-p3 = qplot(sample = data_10000$Ack_Mean,  stat = "qq") + ggtitle(expression("10000 Mensagens"))
-p4 = qplot(sample = data_16800$Ack_Mean,  stat = "qq") + ggtitle(expression("16800 Mensagens"))
 
-multiplot(p1, p2, p3, p4, cols=2)
+data_1260 = subset(data, data$MessagesPerSecond == 1260)$latency
+data_8400 = subset(data, data$MessagesPerSecond == 8400)$latency
+data_10500 = subset(data, data$MessagesPerSecond == 10500)$latency
+data_16800 = subset(data, data$MessagesPerSecond == 16800)$latency
 
-ad.test(data_16800$Ack_Mean)
+p1 = qplot(sample = data_1260,  stat = "qq") + ggtitle(expression("1260 Mensagens"))
+p2 = qplot(sample = data_8400,  stat = "qq") + ggtitle(expression("8400 Mensagens"))
+p3 = qplot(sample = data_10500,  stat = "qq") + ggtitle(expression("10500 Mensagens"))
+p4 = qplot(sample = data_16800,  stat = "qq") + ggtitle(expression("16800 Mensagens"))
 
-complete = create_frame_complete(list_messages)
-plot(density(complete$latency))
+multiplot(p1, p2, p3, p4, cols=3)
 
-data_0 = subset(analysis_table, By10 == 0)
-data_1 = subset(analysis_table, By10 == 1)
-data_2 = subset(analysis_table, By10 == 2)
-data_3 = subset(analysis_table, By10 == 3)
+ad.test(data_1260)
+ad.test(data_8400)
+ad.test(data_10500)
+ad.test(data_16800)
 
 
-p1=ggplot(data_0, aes(x=seq_along(Mean), y=Mean)) + 
-  geom_errorbar(aes(ymin=Min, ymax=Max), width=.2) + geom_bar(stat = "identity") +
-  scale_x_discrete(breaks=seq_along(data_0$Mean), labels=list_messages) +
+png("latency.png")
+p <- ggplot() + 
+  geom_jitter(data=data, aes(x=MessagesPerSecond, y=latency, colour=as.character(MessagesPerSecond)), alpha=0.3, size=6) +
+  geom_errorbar(data=data_ic, aes(x=MessagesPerSecond, ymin=latency_min, ymax=latency_max), width=500, col="red") +
   xlab("Messages/s") +
-  ylab("Lantecy") + theme(legend.position="none") 
+  ylab("Latency in ms") + theme(legend.position="none")
 
-p2=ggplot(data_1, aes(x=seq_along(Mean), y=Mean)) + 
-  geom_errorbar(aes(ymin=Min, ymax=Max), width=.2) + geom_bar(stat = "identity") +
-  scale_x_discrete(breaks=seq_along(data_1$Mean), labels=list_messages) +
+print(p)
+dev.off()
+
+p <- ggplot() + 
+  geom_jitter(data=data, aes(x=MessagesPerSecond, y=latency, color=as.character(MessagesPerSecond)), alpha=0.3, size=6) +
+  geom_errorbar(data=data_ic, aes(x=MessagesPerSecond, ymin=latency_min, ymax=latency_max), width=500, col="red") +
   xlab("Messages/s") +
-  ylab("Lantecy") + theme(legend.position="none")
+  ylab("Latency in ms") + theme(legend.position="none") +
+  scale_y_continuous(limits = c(0,30)) 
 
-p3=ggplot(data_2, aes(x=seq_along(Mean), y=Mean)) + 
-  geom_errorbar(aes(ymin=Min, ymax=Max), width=.2) + geom_bar(stat = "identity") +
-  scale_x_discrete(breaks=seq_along(data_2$Mean), labels=list_messages) +
-  xlab("Messages/s") +
-  ylab("Lantecy") + theme(legend.position="none")
+print(p)
 
-
-p4=ggplot(data_3, aes(x=seq_along(Mean), y=Mean)) + 
-  geom_errorbar(aes(ymin=Min, ymax=Max), width=.2) + geom_bar(stat = "identity") +
-  scale_x_discrete(breaks=seq_along(data_3$Mean), labels=list_messages) +
-  xlab("Messages/s") +
-  ylab("Lantecy") + theme(legend.position="none")
-
-multiplot(p1,p2,p3,p4,cols=2)
-
+# ggplot(data_0, aes(x=MessagesPerSecond, y=Ack_Mean, colour="red")) + 
+#   geom_errorbar(aes(ymin=Ack_Mean-(Ack_SD*1.96), ymax=Ack_Mean+(Ack_SD*1.96), width=1000) +
+#   geom_point()
